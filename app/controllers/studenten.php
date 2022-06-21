@@ -103,5 +103,19 @@ class studenten extends Controller {
     $this->view('studenten/createcomment', $data);
 }
 
+public function createtestcomment(){
+    $opmerking = "Nice";
+    $id = 1;
+    
+    $data = [
+        'opmerking' => $opmerking,
+        'les' => $id
+    ];
 
+    return $opmerking;
+    
+    $this->studentModel->createComment($data);
+
+
+}
 }

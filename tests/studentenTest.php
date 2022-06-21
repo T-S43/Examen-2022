@@ -11,17 +11,17 @@ namespace TDD\Test;
 require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 use PHPUnit\Framework\TestCase;
-use TDD\controllers\Countries;
+use TDD\controllers\studenten;
 
 
- class countriesTest extends TestCase
+ class studentenTest extends TestCase
  {
-    public function testSayMyName()
+    public function addComment()
     {
-        $countries = new Countries();
-        $output = $countries->sayMyName();
-        $expected = "Arjan";
-        $message = "Er moet uitkomen Arjan";
+        $student = new studenten();
+        $output = $student->createComment();
+        $expected = "Nice";
+        $message = "Er moet uitkomen Nice";
 
         $this->assertEquals($expected,
                             $output,
