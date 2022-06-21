@@ -3,6 +3,7 @@
   echo $data["title"]; 
 ?>
 <!--met dese code can je je read page kijken, namen ect van istructer-->
+<a href="<?=URLROOT;?>student/create">Nieuw record</a>
 <div class="row">
     <div class="col-12">
         <table class=" table">
