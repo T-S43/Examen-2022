@@ -37,6 +37,7 @@
                         <option value="2">Bendrix Chameleo</option>
                         <option value="3">Johnson Reddison</option>
                         <option value="4">Patrick Livmoore</option>                                                        
+                        <option value="5">Rick Fair</option>                                                        
                     </select>
 
                     <div class="d-grid gap-2">

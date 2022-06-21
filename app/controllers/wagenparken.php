@@ -47,12 +47,25 @@ class wagenparken extends Controller {
             // Sanitizing imput from $_POST
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             // Check if one of these fields are empty
-            if (empty($_POST['kilometer']) || empty($_POST['instructeurId']) || empty($_POST['id'])) {
+            if (empty($_POST['kilometer'])) {
                 echo '<script type="text/javascript">
-                alert("Er is een lege veld");
+                alert("De kilometer veld is leeg");
                  </script>';
+                 header("Refresh: 0; http://www.eindexamen2022mboutrecht.nl/wagenparken/index");
+                 
+                }if (empty($_POST['instructeurId'])) {
+                    echo '<script type="text/javascript">
+                    alert("De instructeur veldt is leeg");
+                    </script>';
+                    header("Refresh: 0; http://www.eindexamen2022mboutrecht.nl/wagenparken/index");
+
+                    }if(empty($_POST['id'])) {
+                        echo '<script type="text/javascript">
+                        alert("Fout kan geen id vinden, probeer het opnieuw.");
+                        </script>';
+                        header("Refresh: 0; http://www.eindexamen2022mboutrecht.nl/wagenparken/index");
+                    
                 // header("Refresh: 0; http://www.eindexamen2022mboutrecht.nl/wagenparken/updatevoertuig/$id");
-                header("Refresh: 0; http://www.eindexamen2022mboutrecht.nl/wagenparken/index");
             } else {
                 //executing the method in models
                 $this->wagenparkModel->update($_POST);

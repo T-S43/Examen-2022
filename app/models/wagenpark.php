@@ -12,7 +12,8 @@ class wagenpark {
 
     public function getVoertuig() {
         // We are grabbing vechiles and instructeurs from the connected database
-        $this->db->query("SELECT * FROM voertuig INNER JOIN instructeur ON voertuig.instructeurId = instructeur.idInstructeur ORDER BY id");
+        // $this->db->query("SELECT * FROM voertuig INNER JOIN instructeur ON voertuig.instructeurId = instructeur.idInstructeur ORDER BY id");
+        $this->db->query("SELECT * FROM instructeur INNER JOIN voertuig ON  (instructeur.id = voertuig.instructeurId)");
         $result = $this->db->resultSet();
         return $result;
     }
@@ -39,6 +40,7 @@ class wagenpark {
         }
 }
 
+// Getting user info
         public function getSingleUser($id){
             $this->db->query("SELECT * FROM voertuig WHERE id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
