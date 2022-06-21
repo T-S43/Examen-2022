@@ -1,13 +1,13 @@
 <?php
 
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'mvcframework');
+define('DB_USER', 'drive4all_system');
+define('DB_PASS', 'ii2exXM9w3WVFZf4');
+define('DB_NAME', 'drive4all');
 
 define('APPROOT', dirname(dirname(__FILE__))) ;
 
-define('URLROOT', 'http://www.mvc-framework.org');
+define('URLROOT', 'http://drive4all.nl');
 
-define('SITENAME', 'MVC Framework');
+define('SITENAME', 'Drive4All');
 ?>

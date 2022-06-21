@@ -10,9 +10,9 @@
 
     <!-- icons CDN link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    
+
     <!-- Homebrewed CSS -->
     <link rel="stylesheet" href="<?= URLROOT; ?>/public/css/style.css">
-    <title>Landen van de Wereld</title>
+    <title>Drive4All Rijschool</title>
   </head>
   <body>

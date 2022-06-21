@@ -7,7 +7,7 @@ class HomePages extends Controller {
 
   public function index() {
     $data = [
-      'title' => "Homepage"
+      'title' => "Startpagina"
     ];
     $this->view('homepages/index', $data);
   }
