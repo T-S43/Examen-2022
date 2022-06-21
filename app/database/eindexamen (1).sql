@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 21, 2022 at 12:39 PM
+-- Generation Time: Jun 21, 2022 at 01:49 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `lessen` (
   `onderdeel` char(70) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_leerling_leerling` (`leerling`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `lessen`
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `opmerkingen` (
   `opmerking` char(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_les_lessen` (`les`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `opmerkingen`
@@ -121,7 +121,10 @@ CREATE TABLE IF NOT EXISTS `opmerkingen` (
 INSERT INTO `opmerkingen` (`id`, `les`, `opmerking`) VALUES
 (12, 1, 'test'),
 (13, 1, 'Hallo test'),
-(14, 4, 'toevoegen');
+(14, 4, 'toevoegen'),
+(15, 2, '32'),
+(16, 2, ' 2 TEST 2'),
+(17, 1, '222222ERIOF');
 
 -- --------------------------------------------------------
 
@@ -147,9 +150,9 @@ CREATE TABLE IF NOT EXISTS `voertuig` (
 
 INSERT INTO `voertuig` (`id`, `merk`, `type`, `kenteken`, `instructeurId`, `kilometer`) VALUES
 (1, 'Tesla', 'D5000', 'G-029-XL', 3, 534),
-(2, 'Mercedes-Benz', 'L', 'VVC-567-DP', 1, 700),
-(3, 'Aston Martin', 'Benzine', '63-LBW-LL', 2, 90),
-(6, 'DeLorean Motor Company', 'dmc', '03-POR-76', 5, 1),
+(2, 'Mercedes-Benz', 'L', 'VVC-567-DP', 1, 4343),
+(3, 'Aston Martin', 'Benzine', '63-LBW-LL', 2, 110),
+(6, 'DeLorean Motor Company', 'dmc', '03-POR-76', 5, 322),
 (7, 'Ford', 'Ford Mustang', '98-3ND-ID', 4, 64);
 
 --

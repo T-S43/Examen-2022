@@ -1,8 +1,8 @@
 <?php
 
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'driveuser');
+define('DB_PASS', 'EXAMEN2020EXTREEM');
 define('DB_NAME', 'eindexamen');
 
 define('APPROOT', dirname(dirname(__FILE__))) ;
