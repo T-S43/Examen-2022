@@ -209,7 +209,18 @@ class Instructeurs extends Controller
         //returnt de resultaten
         return $data;
         }
+<<<<<<< Updated upstream
         
     }
 
+=======
+
+        public function SayInstructeursName () {
+            return "Gert-jannus";
+        }
+    }
+
+    
+
+>>>>>>> Stashed changes
 
