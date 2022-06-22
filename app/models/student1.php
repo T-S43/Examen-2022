@@ -47,7 +47,7 @@ class student1 {
 
 // Getting everything from the id we sent
         public function getSingleUser($id){
-            $this->db->query("SELECT * FROM lessen1 WHERE id = :id");
+            $this->db->query("SELECT id FROM lessen1 WHERE id = :id");
             $this->db->bind(':id', $id, PDO::PARAM_INT);
             //only returns 1 row with the right id
             return $this->db->single();
