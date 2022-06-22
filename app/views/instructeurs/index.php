@@ -36,6 +36,7 @@
   </table>
 </div>
 <a class="btn btn-sm btn-primary" href="<?=URLROOT;?>/homepages/index">terug</a>
+<a class="btn btn-sm btn-primary" href="<?=URLROOT;?>/leerlingen/wijzig">Wijzig</a>
 
 <?php 
   require APPROOT . '/views/includes/footer.php';
