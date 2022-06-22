@@ -46,9 +46,29 @@
                         INNER JOIN `leerling1` AS lr ON ls.leerling = lr.id
                         INNER JOIN `instructeur` AS ins ON ls.instructeur = ins.email
                         INNER JOIN `alternatieveophaallocatie` AS ao ON ls.id = ao.les
-                        WHERE ls.datum >= CURRENT_DATE()
+                        WHERE ls.datum >= CURRENT_DATE() AND ls.leerling = 3
                         "
                         );
+      //er word een resultset teruggegeven in een variabel
+      $result = $this->db->resultSet();
+      //de variabel word vervolgens gereturned
+      return $result;
+    }
+
+    // public functie
+    public function getWijzigingen() {
+      $this->db->query("SELECT
+                          ls.id,
+                          ls.datum,
+                          ls.leerling,
+                          lr.woonplaats,
+                          lr.straat,
+                          ins.naam
+                        FROM `lessen` AS ls
+                        INNER JOIN `leerling1` AS lr ON ls.leerling = lr.id
+                        INNER JOIN `instructeur` AS ins ON ls.instructeur = ins.email
+                        WHERE ls.datum >= CURRENT_DATE()
+                        ORDER BY ls.datum DESC");
       //er word een resultset teruggegeven in een variabel
       $result = $this->db->resultSet();
       //de variabel word vervolgens gereturned
